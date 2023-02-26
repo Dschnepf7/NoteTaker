@@ -44,29 +44,28 @@ app.post('/api/notes', (req, res) => {
                 console.log(err)
             }
             dbArray = JSON.parse(data);
-            res.json(JSON.parse(data));
-
+        
             dbArray.push(newNote);
-
+        
             const dataString = JSON.stringify(dbArray, null, 3);
-
-
-        fs.writeFile('./db/db.json', dataString, (err) =>
-        err
-        ? console.error(err)
-        : console.log(`New note "${newNote.title}' has been added to the db.json file.`))
-
-        const response = {
-            status: 'success',
-            body: newNote,
-        };
-
-        res.status(201).json(response);
+        
+            fs.writeFile('./db/db.json', dataString, (err) =>
+            err
+            ? console.error(err)
+            : console.log(`New note "${newNote.title}' has been added to the db.json file.`))
+        
+            const response = {
+                status: 'success',
+                body: newNote,
+            };
+        
+            res.status(201).json(response);
         });
     } else {
         res.status(500).json('Error adding new note.')
     }
 });
+
 
 app.get('*', (req, res) => 
     res.sendFile(path.join(__dirname, './public/index.html'))
