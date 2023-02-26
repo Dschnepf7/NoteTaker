@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.port || 3001;
 const fs = require('fs');
 const uuid = require('./helpers/uuid')
-const database = require('./db/db.json')
+// const database = require('./db/db.json')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
