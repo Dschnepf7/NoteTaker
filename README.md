@@ -2,11 +2,18 @@
 
 This application is designed to be a note taking application for the user, where they can write, save, and retrieve various notes.
 
-## Your Task
+## Description
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+This note taking application is created through connecting node.js to the front end javascript. The application allows the user to create new notes by clicking the plus icon in the top right corner of the "notes" page. Once the note is created, the note can be saved for later retrieval using the "disk" icon that is also located in the upper right hand corner. The application is designed to be fast, user friendly, and easy to use. 
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+### URL
+
+https://boiling-dawn-30412.herokuapp.com/
+
+
+### Screeshot
+
+![image](https://user-images.githubusercontent.com/122393318/221713682-b93c1dc8-59f7-44d9-bac6-a6f3af781b2d.png)
 
 
 ## User Story
